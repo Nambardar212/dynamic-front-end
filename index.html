@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <div class="App">
+        <div class="text-here" id="text-container">
+            <p>some example text inside it</p>
+        </div>
+        
+        <div class="change-prop">
+          <p>
+            <input type="text" id="colorbox" placeholder="Enter Color">
+            <button onclick="setColor()" id="colorchange" class="stylebt">Set Color</button>
+          </p>
+           
+          <p>
+            Change text size(10 to 100)
+            <input type="range" name="text-size" id="text-size" min="10" max="100" default="55" oninput='sizeChange()'>
+          </p>
+            
+          <p>
+            <button id="bold" class="stylebt" onclick="setBold()">Bold</button>
+            <button id="italic" class="stylebt" onclick="setItalic()">Italic</button>
+            <button id="underline" class="stylebt" onclick="setLine()">Underline</button>
+          </p>
+        
+          <p>
+            Select Font Family: <select onchange="setFont()" id="list"></select>
+          </p>
+       
+        <button id="getstyle" onclick="display()" class="stylebt">Get Style Properties</button>
+     
+        <p id="css-props"></p>
+    </div>
+    <script src="App.js"></script>
+</body>
+</html>
